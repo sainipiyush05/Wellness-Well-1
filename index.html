@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Well - Advanced Disease Prediction</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/logo.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <script defer src="scripts/modal.js"></script>
+  </head>
+  <body>
+    <div class="hero-container">
+      <div class="background-grid"></div>
+
+      <nav class="nav-container">
+        <div class="logo">
+          <!-- Logo SVG component here -->
+          <include src="components/logo.html"></include>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="#" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <div class="content-wrapper">
+        <h1 class="hero-title">Wellness Well</h1>
+        <div class="hero-tagline">Your Health, Our Priority</div>
+        <p class="hero-description">
+          Welcome to the future of preventive healthcare. Our advanced disease
+          prediction system leverages cutting-edge machine learning algorithms
+          to analyze your health indicators and provide early insights about
+          potential health risks with unprecedented accuracy.
+        </p>
+
+        <div class="action-buttons">
+          <button
+            class="cta-button primary-cta"
+            onclick="window.location.href='disease-selection.html'"
+          >
+            Get Started
+          </button>
+          <button class="cta-button secondary-cta" onclick="openModal()">
+            Learn More
+          </button>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔬</div>
+            <h3 class="feature-title">Advanced Analysis</h3>
+            <p class="feature-description">
+              Powered by state-of-the-art machine learning algorithms for
+              accurate predictions
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">Secure & Private</h3>
+            <p class="feature-description">
+              Your health data is encrypted and protected with military-grade
+              security
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Detailed Reports</h3>
+            <p class="feature-description">
+              Comprehensive health insights with actionable recommendations
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+
+    <script>
+      // Add any necessary JavaScript here
+      function openModal() {
+        // Implementation for modal
+      }
+    </script>
+
+    <!-- Learn More Modal -->
+    <div class="modal-overlay" id="learnMoreModal">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-content">
+          <div class="modal-section">
+            <h2 class="modal-title">Advanced Disease Prediction System</h2>
+            <p class="modal-subtitle">
+              Discover how we're revolutionizing preventive healthcare
+            </p>
+
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-icon-small">🧬</span>
+                <div>
+                  <h3>Machine Learning Excellence</h3>
+                  <p>
+                    Our algorithms are trained on vast medical datasets,
+                    ensuring high accuracy in disease prediction.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon-small">📱</span>
+                <div>
+                  <h3>User-Friendly Interface</h3>
+                  <p>
+                    Simple and intuitive design makes health monitoring
+                    accessible to everyone.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon-small">🔐</span>
+                <div>
+                  <h3>Data Security</h3>
+                  <p>
+                    End-to-end encryption and compliance with international
+                    healthcare data protection standards.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon-small">📊</span>
+                <div>
+                  <h3>Comprehensive Reports</h3>
+                  <p>
+                    Detailed analysis and personalized health recommendations
+                    based on your data.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disease Prediction - Wellness Well</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/disease-selection.css" />
+  </head>
+  <body>
+    <div class="disease-container">
+      <div class="header">
+        <h1>Disease Prediction</h1>
+        <p>
+          Select a condition to analyze your health indicators and receive
+          personalized insights.
+        </p>
+      </div>
+
+      <div class="disease-grid">
+        <!-- Cancer Card -->
+        <div
+          class="disease-card"
+          onclick="showForm('cancer')"
+          style="animation-delay: 0.1s"
+        >
+          <div class="disease-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-7.208a2.5 2.5 0 113.478-3.478 2.5 2.5 0 01-3.478 3.478z"
+              />
+            </svg>
+          </div>
+          <h2 class="disease-title">Cancer Detection</h2>
+          <p class="disease-description">
+            Analyze cellular characteristics to assess cancer risk using
+            advanced machine learning.
+          </p>
+          <button class="btn btn-primary">Begin Analysis</button>
+        </div>
+
+        <!-- Heart Disease Card -->
+        <div
+          class="disease-card"
+          onclick="showForm('heart')"
+          style="animation-delay: 0.2s"
+        >
+          <div class="disease-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+          </div>
+          <h2 class="disease-title">Heart Disease</h2>
+          <p class="disease-description">
+            Evaluate cardiovascular health indicators to predict potential heart
+            conditions.
+          </p>
+          <button class="btn btn-primary">Begin Analysis</button>
+        </div>
+
+        <!-- Parkinson's Card -->
+        <div
+          class="disease-card"
+          onclick="showForm('parkinsons')"
+          style="animation-delay: 0.3s"
+        >
+          <div class="disease-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13 3c3.88 0 7 3.14 7 7 0 2.8-1.63 5.19-4 6.31V21H8v-4.69C5.64 15.19 4 12.8 4 10c0-3.86 3.12-7 7-7zm-1 13h2v4h-2v-4z"
+              />
+            </svg>
+          </div>
+          <h2 class="disease-title">Parkinson's Disease</h2>
+          <p class="disease-description">
+            Assess neurological indicators to detect early signs of Parkinson's
+            disease.
+          </p>
+          <button class="btn btn-primary">Begin Analysis</button>
+        </div>
+
+        <!-- Diabetes Card -->
+        <div
+          class="disease-card"
+          onclick="showForm('diabetes')"
+          style="animation-delay: 0.4s"
+        >
+          <div class="disease-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H6v-2h6v2zm4-4H6v-2h10v2zm0-4H6V7h10v2z"
+              />
+            </svg>
+          </div>
+          <h2 class="disease-title">Diabetes Risk</h2>
+          <p class="disease-description">
+            Analyze metabolic factors to determine diabetes risk and provide
+            preventive insights.
+          </p>
+          <button class="btn btn-primary">Begin Analysis</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Overlay -->
+    <div class="form-overlay" id="formOverlay">
+      <!-- Form containers will be dynamically inserted here -->
+    </div>
+
+    <script src="scripts/disease-prediction.js"></script>
+  </body>
+</html>

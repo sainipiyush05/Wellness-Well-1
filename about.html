@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Wellness Well</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <div class="about-container">
+      <!-- Animated Background Shapes -->
+      <div class="background-shapes" id="backgroundShapes"></div>
+
+      <div class="about-header">
+        <h1 class="about-title">Meet Our Team</h1>
+        <p class="about-subtitle">
+          We are a dedicated group of professionals committed to revolutionizing
+          healthcare through innovative technology and machine learning
+          solutions.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-member" style="animation-delay: 0.2s">
+          <div class="member-image-container">
+            <img src="piyush2.jpg" alt="Team Member" class="member-image" />
+          </div>
+          <h2 class="member-name">Piyush Saini</h2>
+          <div class="member-role">ML Engineer & Backend Developer</div>
+          <p class="member-bio">
+            Specializing in machine learning algorithms and backend
+            architecture, leading our technical innovation in disease prediction
+            systems.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/sainipiyush05"
+              target="_blank"
+              class="social-link"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/piyush-saini-8bb40827a/"
+              target="_blank"
+              class="social-link"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member" style="animation-delay: 0.4s">
+          <div class="member-image-container">
+            <img src="soubhik.jpg" alt="Team Member" class="member-image" />
+          </div>
+          <h2 class="member-name">Soubhik Sadhu</h2>
+          <div class="member-role">UI/UX Designer & App Developer</div>
+          <p class="member-bio">
+            Creating intuitive and accessible user interfaces while ensuring
+            seamless user experiences across all platforms.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.github.com/SoubhLance"
+              target="_blank"
+              class="social-link"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/soubhik-sadhu-0427b4288?"
+              target="_blank"
+              class="social-link"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member" style="animation-delay: 0.6s">
+          <div class="member-image-container">
+            <img src="sumedha.jpg" alt="Team Member" class="member-image" />
+          </div>
+          <h2 class="member-name">Chandra Bhayal</h2>
+          <div class="member-role">Web Developer</div>
+          <p class="member-bio">
+            Expert in modern web technologies, focusing on creating robust and
+            scalable web applications for healthcare solutions.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/Brighteyekid"
+              target="_blank"
+              class="social-link"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              class="social-link"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <button class="back-button" onclick="window.location.href='index.html'">
+        Back to Home
+      </button>
+    </div>
+
+    <script>
+      // Loading Animation
+      window.addEventListener("load", () => {
+        const loadingOverlay = document.getElementById("loadingOverlay");
+        loadingOverlay.style.opacity = "0";
+        setTimeout(() => {
+          loadingOverlay.style.display = "none";
+        }, 500);
+      });
+
+      // Create animated background shapes
+      function createBackgroundShapes() {
+        const container = document.getElementById("backgroundShapes");
+        const shapes = 15;
+
+        for (let i = 0; i < shapes; i++) {
+          const shape = document.createElement("div");
+          shape.className = "shape";
+          const size = Math.random() * 200 + 50;
+
+          shape.style.width = `${size}px`;
+          shape.style.height = `${size}px`;
+          shape.style.left = `${Math.random() * 100}%`;
+          shape.style.top = `${Math.random() * 100}%`;
+          shape.style.animationDuration = `${Math.random() * 20 + 10}s`;
+          shape.style.animationDelay = `${Math.random() * 5}s`;
+
+          container.appendChild(shape);
+        }
+      }
+
+      // Initialize background shapes
+      createBackgroundShapes();
+    </script>
+  </body>
+</html>
