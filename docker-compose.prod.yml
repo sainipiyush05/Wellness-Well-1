@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: your-registry/medipredict-frontend:latest
+    restart: always
+    environment:
+      - REACT_APP_API_URL=https://api.your-domain.com
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./ssl:/etc/nginx/ssl # For SSL certificates
+
+  backend:
+    image: your-registry/medipredict-backend:latest
+    restart: always
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      # Add other environment variables
+    volumes:
+      - ./backend/models:/app/models
